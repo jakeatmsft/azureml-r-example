@@ -1,17 +1,6 @@
-# azureml-r-example
-Example for using azureml cli v2 with R models
-
-# Instructions
-- make sure you have a compute instance available
-- make sure you have an environment built
-- install cliv2 :https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-cli
-
-- double check pipeline.yml
-
-```
 $schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
 type: pipeline
-compute:  azureml:[compute instance]
+compute:  azureml:ds12
 display_name: r-accidents-example
 experiment_name: r-accidents-example
 description: Train a GLM using R on the accidents dataset.  
@@ -23,7 +12,7 @@ jobs:
     code:
       local_path: src
     environment:
-      azureml:[environment]:[env_version]
+      azureml:r-train-env:1
     inputs:
       training_data:
         dataset: 
@@ -38,14 +27,6 @@ jobs:
     code:
       local_path: src
     environment:
-      azureml:[environment]:[env_version]
+      azureml:r-train-env:1
     inputs:
       model: ${{jobs.train.outputs.model_out}}
-
-```
-update [compute instance] , eg. <b>cpu-cluster</b>
-update [environment]:[env_version], <b>eg. r_env:1</b>
-
-- run from accidents folder: 
-  
-  <code>az ml job create -f ./pipeline.yml --web</code>
