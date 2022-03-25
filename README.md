@@ -2,8 +2,7 @@
 Example for using azureml cli v2 with R models
 
 # Instructions
-- make sure you have a compute instance available
-- make sure you have an environment built
+- Open env_build.ipynb notebook and run all cells to create environment and compute cluster 
 - install cliv2 :https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-cli
 
 - double check pipeline.yml
