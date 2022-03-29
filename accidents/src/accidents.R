@@ -10,7 +10,7 @@ Sys.setenv(MLFLOW_BIN=system("which mlflow", intern=TRUE))
 Sys.setenv(MLFLOW_PYTHON_BIN=system("which python", intern=TRUE))
 
 options <- list(
-  make_option(c("-d", "--data_folder"), default="./data"),
+  make_option(c("-d", "--data_folder"), default="../data"),
   make_option(c("-o", "--out_folder"), default="./out")
 )
 
@@ -35,6 +35,7 @@ with(run <- mlflow_start_run(), {
 
   print("Logging model")
   mlflow_log_model(predictor, "model")
+  save(model, file=file.path(opt$out_folder, "model.rdata"))
   saveRDS(predictions, file.path(opt$out_folder, "predictions.Rd"))
 })
 

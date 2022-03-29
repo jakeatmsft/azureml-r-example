@@ -19,6 +19,9 @@ opt <- parse_args(opt_parser)
 paste(opt$model_folder)
 
 with(run <- mlflow_start_run(), {
+  print("Loading the model")
+  load(file.path(opt$model_folder, "model.rdata"))
+  print(summary(model))
   print("Loading the predictions")
   print(file.path(opt$model_folder, "predictions.Rd"))
   print(file.info(file.path(opt$model_folder, "predictions.Rd")))
