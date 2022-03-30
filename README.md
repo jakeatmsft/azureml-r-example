@@ -46,6 +46,7 @@ update [compute instance] , eg. <b>cpu-cluster</b>
 update [environment]:[env_version], <b>eg. r_env:1</b>
 
 - login to azure (using managed identity):
+
   <code>az login --identity</code>
 
 - run from accidents folder: 
