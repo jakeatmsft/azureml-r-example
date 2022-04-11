@@ -27,4 +27,4 @@ jobs:
     environment:
       azureml:[environment]:[env_version]
     inputs:
-      model: ${{jobs.train.outputs.model_out}}
+      model: ${{parent.jobs.train.outputs.model_out}}
