@@ -7,8 +7,9 @@ Example for using azureml cli v2 with R models
 
 - double check pipeline.yml parameters
 
--- update [compute instance] , eg. <b>cpu-cluster</b>
--- update [environment]:[env_version], <b>eg. r_env:1</b>
+- update [compute instance] , eg. <b>cpu-cluster</b>
+
+- update [environment]:[env_version], <b>eg. r_env:1</b>
 
 - login to azure (using managed identity):
 
