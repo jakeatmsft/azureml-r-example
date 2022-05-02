@@ -29,4 +29,4 @@ AzureML Compute instances currently use RServer Community Edition to host RStudi
                             auth=cli_auth) </code>
 
  - Use AzureML SDK to access datasets:
-   - ![screen](https://github.com/jakeatmsft/azureml-r-example/blob/d0948a93212fb4b17d404ee7c4d2035ae1a89d18/compute_instance_aml/screen.png)
+   - ![screen](https://github.com/jakeatmsft/azureml-r-example/blob/4266cbaa1203f786d08ee0a928fe9e3d71ba70c7/compute_instance_aml/screen.png)
