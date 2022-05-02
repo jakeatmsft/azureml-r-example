@@ -26,9 +26,9 @@ cli_auth = azureml$authentication$AzureCliAuthentication()
 
 # Get reference to AzureML workspace if on local desktop. This will
 # prompt a broswer for interactive authentication
-ws <- azureml$Workspace$get(name="wu2modtimesmlsw",
-                            subscription_id="7fd76d0f-84f2-498b-a997-e0d059af5ce1",
-                            resource_group='wu2modtimerg',
+ws <- azureml$Workspace$get(name="workspace sname",
+                            subscription_id="subscription_id",
+                            resource_group='resource_group',
                             auth=cli_auth)
 ```
 
