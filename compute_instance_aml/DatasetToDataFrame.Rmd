@@ -21,12 +21,9 @@ azureml <- import("azureml.core")
 
 cli_auth = azureml$authentication$AzureCliAuthentication()
 
-# Get reference to AzureML workspace if on CI (via RStudio). No auth needed
-#ws <- azureml$Workspace$from_config()
-
 # Get reference to AzureML workspace if on local desktop. This will
 # prompt a broswer for interactive authentication
-ws <- azureml$Workspace$get(name="workspace sname",
+ws <- azureml$Workspace$get(name="workspace name",
                             subscription_id="subscription_id",
                             resource_group='resource_group',
                             auth=cli_auth)
