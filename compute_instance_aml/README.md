@@ -8,12 +8,12 @@ AzureML Compute instances currently use RServer Community Edition to host RStudi
  - Copy script to Compute Instance
  - Script Usage:
   
-  <code>  usage: switch_r_env.sh [R_Version] 
- 
-  example: $./switch_r_env.sh 4.0.5 
- 
-  See https://cran.r-project.org/src/base/R-4/ for available versions.
-  </code>
+  <code>  usage: switch_r_env.sh [R_Version]</code>
+  
+  <code>  example: $./switch_r_env.sh 4.0.5 </code>  
+  
+ <code> See https://cran.r-project.org/src/base/R-4/ for available versions.</code>
+  
 
  - Restart RStudio Session
    - Go to Session -> Quit Session to restart client with new R version.
@@ -27,9 +27,9 @@ AzureML Compute instances currently use RServer Community Edition to host RStudi
  - Open demo notebook:
    - [DatasetToDataFrame](https://github.com/jakeatmsft/azureml-r-example/blob/d0948a93212fb4b17d404ee7c4d2035ae1a89d18/compute_instance_aml/DatasetToDataFrame.Rmd)
  - Replace azureml connection information
-   - <code>ws <- azureml<span>&#36;</span>Workspace<span>&#36;</span>get(name="<mark>workspace name</mark>", <br/>
-                            subscription_id="<mark>subscription_id</mark>", <br/>
-                            resource_group="<mark>resource_group</mark>", <br/>
+   - <code>ws <- azureml<span>&#36;</span>Workspace<span>&#36;</span>get(name="<mark>workspace name</mark>",
+                            subscription_id="<mark>subscription_id</mark>", 
+                            resource_group="<mark>resource_group</mark>", 
                             auth=cli_auth) </code>
 
  - Use AzureML SDK to access datasets:
