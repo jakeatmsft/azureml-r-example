@@ -7,9 +7,13 @@ AzureML Compute instances currently use RServer Community Edition to host RStudi
 
  - Copy script to Compute Instance
  - Script Usage:
-  <code>  usage: switch_r_env.sh [R_Version] \
-  example: $./switch_r_env.sh 4.0.5 \
-  See https://cran.r-project.org/src/base/R-4/ for available versions.\ </code>
+  
+  <code>  usage: switch_r_env.sh [R_Version] 
+ 
+  example: $./switch_r_env.sh 4.0.5 
+ 
+  See https://cran.r-project.org/src/base/R-4/ for available versions.
+  </code>
 
  - Restart RStudio Session
    - Go to Session -> Quit Session to restart client with new R version.
